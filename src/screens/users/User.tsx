@@ -11,7 +11,7 @@ function User() {
             <hr />
             <Link to="followers">see followers</Link>
             {/* User 컴포넌트의 자식 컴포넌트가 있다면 outlet에 그 자식이 render됨 */}
-            <Outlet />
+            <Outlet context={{ nameOfMyUser: users[Number(userId) - 1].name }} />
         </div>
     );
 }
